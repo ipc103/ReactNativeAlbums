@@ -8,9 +8,12 @@ class AlbumList extends Component {
 
   state = {albums: []}
 
+  fetchAlbums(){
+    fetchAlbums().then(albums => this.setState({albums: albums}))
+  }
+
   componentDidMount(){
-    fetchAlbums()
-      .then(albums => this.setState({albums: albums}))
+    this.fetchAlbums()
   }
 
   renderAlbums(){

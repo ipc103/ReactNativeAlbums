@@ -1,6 +1,6 @@
 import 'react-native';
 import React from 'react';
-import Index from '../index.ios.js';
+import AlbumList from '../../src/components/AlbumList'
 
 import {fetch} from 'whatwg-fetch';
 window.fetch = fetch;
@@ -10,6 +10,6 @@ import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <Index />
+    <AlbumList />
   );
 });
