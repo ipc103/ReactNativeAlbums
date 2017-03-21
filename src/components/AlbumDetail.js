@@ -1,6 +1,10 @@
 import React from 'react'
 import { Text } from 'react-native'
 
+import Card from './Card'
+
 export default ({album}) => (
-  <Text>{ album.title }</Text>
+  <Card>
+    <Text>{ album.title }</Text>
+  </Card>
 )
