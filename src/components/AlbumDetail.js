@@ -2,9 +2,12 @@ import React from 'react'
 import { Text } from 'react-native'
 
 import Card from './Card'
+import CardSection from './CardSection'
 
 export default ({album}) => (
   <Card>
-    <Text>{ album.title }</Text>
+    <CardSection>
+      <Text>{ album.title }</Text>
+    </CardSection>
   </Card>
 )
