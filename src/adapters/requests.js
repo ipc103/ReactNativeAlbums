@@ -14,10 +14,10 @@ export function patch(url, data){
   return sendRequest(url, 'PATCH', data)
 }
 
-export function delete(url){
-  return sendRequest(url, 'DELETE', {})
+export function destroy(url){
+  return sendRequest(url, 'DELETE')
 }
 
-function sendRequest(url, method, data){
-  return fetch(url, {method: method, headers: {'Content-Type': 'application/json'}}, body: JSON.stringify(data)).then(res => res.json())
+function sendRequest(url, method, data={}){
+  return fetch(url, {method: method, headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data) }).then(res => res.json())
 }

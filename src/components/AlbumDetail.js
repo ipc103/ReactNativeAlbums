@@ -3,6 +3,7 @@ import { Image, Text, View } from 'react-native'
 
 import Card from './Card'
 import CardSection from './CardSection'
+import Button from './Button'
 
 export default ({album}) => (
   <Card>
@@ -15,8 +16,13 @@ export default ({album}) => (
         <Text>{ album.artist }</Text>
       </View>
     </CardSection>
+
     <CardSection>
         <Image style={styles.albumImage} source={{uri: album.image}} />
+    </CardSection>
+
+    <CardSection>
+      < Button />
     </CardSection>
   </Card>
 )
