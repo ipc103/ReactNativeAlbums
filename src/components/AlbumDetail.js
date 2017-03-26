@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, Text, View, Linking } from 'react-native'
 
 import Card from './Card'
 import CardSection from './CardSection'
@@ -22,7 +22,7 @@ export default ({album}) => (
     </CardSection>
 
     <CardSection>
-      < Button />
+      < Button buttonText="Click to Buy Album" onPress={() => Linking.openURL(album.url)}/>
     </CardSection>
   </Card>
 )
